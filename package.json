@@ -1,0 +1,21 @@
+{
+  "name": "demo_test_bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "jspdf": "^2.5.1",
+    "marked": "^7.0.5"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.0",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "LQF-DEV",
+  "license": "ISC"
+}

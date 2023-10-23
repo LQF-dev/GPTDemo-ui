@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 指定了 当前文档 和 链接的外部资源的关系，通常用于 链接一个外部样式表（css 文件）； -->
+    <!-- link 就是为了引入 css文件的 -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 功能：用于 嵌入 或 引用 一个可执行的脚本； -->
+    <!-- script 就是为了链接 js文件-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script> -->
+    <!--
+     defer 属性仅适用于外部脚本，如果 script 脚本没有 src，则会忽略 defer 特性。
+     defer 属性对模块脚本（script type=‘module’）无效，因为模块脚本就是以 defer 的形式加载的。
+     
+    建议所有的外联脚本都默认设置此属性，因为他不会阻塞 HTML 解析，可以并行下载 JavaScript 资源
+    -->
+    <script type="module" defer src="script.js"></script>
+
+    <title>chatGPT web application</title>
+  </head>
+
+  <body style="height: 100%">
+    <div class="container" style="height: 100%">
+      <div
+        class="leftScream"
+        style="width: 40%; height: 100%; float: left; display: inline"
+      >
+        <div class="inputPrompt" style="height: 50%">
+          <div class="input input-group-lg mt-3" style="height: 60%">
+            <textarea
+              id="multipleWord"
+              style="height: 100%; width: 100%; resize: none"
+            >
+              请以','连接单词，例如recalcitrant、opulent、impeach、malevolent、elicit、fumble、gully、versatile、figment、invoice</textarea
+            >
+          </div>
+
+          <div class="mt-3" style="height: 40%">
+            <button
+              type="button"
+              class="btn btn-primary m-3 btn-lg generateButton"
+            >
+              GPT生成故事
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary m-3 btn-lg exportButton"
+            >
+              导出故事
+            </button>
+          </div>
+        </div>
+
+        <div class="wordSearch h-50">
+          <div class="input-group input-group-lg mt-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="请输入你需要搜索的单词"
+              id="wordSearchContent"
+            />
+            <button class="btn btn-primary wordSearchButton" type="submit">
+              搜单词
+            </button>
+          </div>
+
+          <div>
+            <div class="wordContent" style="margin-top: 5%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rightScream"
+        style="width: 60%; height: 100%; float: left; display: inline"
+      >
+        <div style="display: flex">
+          <div class="storyContent" style="margin-left: 5%"></div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
